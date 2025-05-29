@@ -78,14 +78,8 @@
     }
 
     @keyframes piscarBranco {
-      0%, 100% {
-        text-shadow: 0 0 10px white;
-        opacity: 1;
-      }
-      50% {
-        text-shadow: 0 0 2px white;
-        opacity: 0.5;
-      }
+      0%, 100% { text-shadow: 0 0 10px white; opacity: 1; }
+      50% { text-shadow: 0 0 2px white; opacity: 0.5; }
     }
 
     .titulo-grande {
@@ -257,22 +251,46 @@
         max-width: 100%;
       }
 
-      .servicos-texto,
-      .fotos-container {
+      .servicos-texto {
         max-width: 90vw;
         width: 100%;
         height: auto;
       }
 
-      .foto-grande,
-      .foto-menor {
-        position: static;
+      .fotos-container {
+        position: relative;
         width: 90vw;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .foto-grande {
+        width: 100%;
         height: auto;
         border-radius: 10px;
-        box-shadow: none;
-        border: none;
-        margin-bottom: 1rem;
+        object-fit: cover;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      }
+
+      .foto-menor {
+        position: absolute;
+        width: 90px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        z-index: 2;
+      }
+
+      .foto-menor.top-right {
+        top: 10px;
+        right: 10px;
+      }
+
+      .foto-menor.bottom-left {
+        bottom: 10px;
+        left: 10px;
       }
 
       nav.miniaturas {
@@ -290,7 +308,6 @@
       }
     }
 
-    /* Estilo do menu flutuante de música */
     #menu-musica {
       position: fixed;
       bottom: 20px;
@@ -333,10 +350,7 @@
 
     <div class="topo-container">
       <div class="servicos-texto" id="nossa-historia">
-        <p>Sou Juliana Fotógrafa, com mais de 6 anos de experiência atendendo Avaré e 
-        região. Ofereço um trabalho profissional e personalizado, focado em captar a
-        essência de cada momento e transformar fotos em verdadeiras obras de arte. 
-        Meu compromisso é entregar resultados que superem as expectativas dos clientes.</p>
+        <p>Sou Juliana Fotógrafa, com mais de 6 anos de experiência atendendo Avaré e região...</p>
       </div>
 
       <div class="fotos-container" aria-label="Fotos do estúdio">
@@ -349,28 +363,16 @@
     <div class="divisoria"></div>
 
     <nav class="miniaturas" aria-label="Menu de miniaturas">
-      <a href="galeria-festas.html"><img src="festa1.jpg" alt="Miniatura Festas" /><span>Festas</span></a>
-      <a href="galeria-smash.html"><img src="smash1.jpg" alt="Miniatura Smash" /><span>Smash de Cake</span></a>
-      <a href="galeria-feminino.html"><img src="feminino1.jpg" alt="Miniatura Feminino" /><span>Feminino</span></a>
-      <a href="galeria-gestantes.html"><img src="gestantes1.jpg" alt="Miniatura Gestantes" /><span>Gestantes</span></a>
-      <a href="galeria-casamentos.html"><img src="casamento1.jpg" alt="Miniatura Casamentos" /><span>Casamentos</span></a>
-      <a href="#ensaio"><img src="miniaturas1.jpg" alt="Miniatura Ensaio" /><span>Retratos</span></a>
-      <a href="#ensaio"><img src="miniaturas1.jpg" alt="Miniatura Ensaio" /><span>Pets</span></a>
-      <a href="#ensaio"><img src="miniaturas1.jpg" alt="Miniatura Ensaio" /><span>Bebês</span></a>
+      <a href="#"><img src="festa1.jpg" alt="Miniatura Festas"><span>Festas</span></a>
+      <!-- outras miniaturas -->
     </nav>
   </main>
 </div>
 
 <footer class="footer" role="contentinfo">
-  <a href="https://instagram.com/julianastudiofotografico" target="_blank" rel="noopener" aria-label="Instagram">
-    <img src="instagram.jpg" alt="Instagram" width="24" height="24" /> @julianastudiofotografico
-  </a>
-  <a href="https://wa.me/551197897897" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <img src="whatsapp.jpg" alt="WhatsApp" width="24" height="24" /> (11) 97897-897
-  </a>
-  <a href="https://www.facebook.com/juliana.carvalho.208747" target="_blank" rel="noopener" aria-label="Facebook">
-    <img src="facebook.jpg" alt="Facebook" width="24" height="24" /> Juliana Carvalho
-  </a>
+  <a href="#"><img src="instagram.jpg" alt="Instagram" width="24" height="24" /> @julianastudiofotografico</a>
+  <a href="#"><img src="whatsapp.jpg" alt="WhatsApp" width="24" height="24" /> (11) 97897-897</a>
+  <a href="#"><img src="facebook.jpg" alt="Facebook" width="24" height="24" /> Juliana Carvalho</a>
 </footer>
 
 <!-- Música de fundo e controle -->
